@@ -1,0 +1,16 @@
+{
+  "name": "hbs-challenge",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "jest": "^29.3.1",
+    "mustache": "^4.2.0"
+  }
+}
