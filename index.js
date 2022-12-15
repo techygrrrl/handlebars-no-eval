@@ -25,19 +25,12 @@ const forrrMattrrr = (value) => {
 
 // endregion Helpers
 
-/*
-  This function should allow implementing the above-mentioned helper functions.
-
-  You are allowed to use any library you can find, provided it does not use eval.
-
-  You are allowed to change the format of the input, e.g. if {{formatNumber myNumber}} is not preferred and you'd like to use an alternative format, e.g.
-  {{formatNumber}}myNumber{{/formatNumber}} that is ok too. If you do this, please copy the test cases and replace the input.
-
-  Constraints:
-    - Hard constraint: Cannot use eval
-    - Soft constraint: Avoid changing the helpers (e.g. leave forrrMattrrr, formatNumber, screamingCase as they are)
-*/
-
+/**
+ * TODO: Implement
+ * @param {String} input 
+ * @param {Record<string, string>} placeholders 
+ * @returns {String}
+ */
 function performTextReplacement(input, placeholders) {
   // TODO: code goes here. Return a string that replaces text, running it through the helpers
   return "todo!";
