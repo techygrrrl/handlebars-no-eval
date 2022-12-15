@@ -5,7 +5,7 @@ The Chrome Web Store has a policy that manifest v3 Chrome extensions cannot incl
 The [mustache library](https://www.npmjs.com/package/mustache) does not use eval but it does not support helpers—by design, it boasts it is a "logic-free" solution.
 
 - [Running locally](#running-locally)
-- [Running on Codesandbox (TODO)](#running-on-codesandbox-todo)
+- [Running on StackBlitz](#running-on-stackblitz)
 - [About the tests](#about-the-tests)
 - [Running the tests](#running-the-tests)
 - [Constraints in more detail](#constraints-in-more-detail)
@@ -16,9 +16,20 @@ The [mustache library](https://www.npmjs.com/package/mustache) does not use eval
 The project uses Node 16.x (see `.nvmrc`) but it will likely run on other versions but has not been tested for compatibility.
 
 
-## Running on Codesandbox (TODO)
+## Running on StackBlitz
 
-TODO:
+If you do not have a Node.js environment set up, you can run it on StackBlitz:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/techygrrrl/handlebars-no-eval?file=index.js)
+
+After the `npm install` finishes you can run `npm test` in the console.
+
+<details>
+<summary>Screenshot of StackBlitz deploy</summary>
+
+![](screenshots/stackblitz-preview.png)
+
+</details>
 
 
 ## About the tests
