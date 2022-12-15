@@ -36,7 +36,13 @@ After the `npm install` finishes you can run `npm test` in the console.
 
 Below is a screenshot of the test runs in Webstorm. More information on how to run the tests below.
 
-![](screenshots/test-cases.png)
+<details>
+<summary>Screenshot of test runs in WebStorm</summary>
+
+<img src="screenshots/test-cases.png" width="400" />
+
+</details>
+
 
 In the above screenshot:
 
@@ -57,7 +63,14 @@ Then you can run the tests:
 
 You can also run the tests from inside of Webstorm by clicking the play button at the top-level `describe` block in the file `./tests/perform-text-replacement.test.js`.
 
-![](screenshots/webstorm.png)
+
+<details>
+<summary>Screenshot of how to run test cases in WebStorm</summary>
+
+<img src="screenshots/webstorm.png" width="440" />
+
+</details>
+
 
 
 ## Constraints in more detail
