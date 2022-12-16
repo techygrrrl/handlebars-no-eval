@@ -25,6 +25,12 @@ const forrrMattrrr = (value) => {
 
 // endregion Helpers
 
+const helpers = {
+  formatNumber,
+  screamingCase,
+  forrrMattrrr,
+}
+
 /**
  * @param {String} input
  * @param {Record<string, string>} placeholders 
@@ -32,12 +38,6 @@ const forrrMattrrr = (value) => {
  */
 function performTextReplacement(input, placeholders) {
   let output = input;
-
-  const helpers = {
-    formatNumber,
-    screamingCase,
-    forrrMattrrr,
-  }
 
   // Thanks QuLogic!
   // https://regex101.com/r/er0Vkk/1
