@@ -26,14 +26,57 @@ const forrrMattrrr = (value) => {
 // endregion Helpers
 
 /**
- * TODO: Implement
- * @param {String} input 
+ * @param {String} input
  * @param {Record<string, string>} placeholders 
  * @returns {String}
  */
 function performTextReplacement(input, placeholders) {
-  // TODO: code goes here. Return a string that replaces text, running it through the helpers
-  return "todo!";
+  let output = input;
+
+  const helpers = {
+    formatNumber,
+    screamingCase,
+    forrrMattrrr,
+  }
+
+  // Thanks QuLogic!
+  // https://regex101.com/r/er0Vkk/1
+  const regExp = /{{((?<variable>[^} ]+)|(?<helper>[^} ]+) (?<argument>[^}]+))}}/gm
+  let matches = regExp.exec(input)
+
+  if (!matches) {
+    return output
+  }
+
+
+  while (matches) {
+    const helperName = matches?.groups?.helper
+    const helperArg = matches?.groups?.argument
+
+    // With helpers
+    if (helperName && helperArg) {
+      const helperFunc = helpers[helperName]
+
+      if (typeof helperFunc === 'function') {
+        const transformedPlaceholder = helperFunc(placeholders[helperArg])
+
+        output = output
+          .replaceAll(`{{${helperName} ${helperArg}}}`, transformedPlaceholder)
+      }
+    }
+
+    // No helpers
+    const placeholder = matches?.groups?.variable
+    if (placeholder) {
+      output = output
+        .replaceAll('{{' + placeholder + '}}', placeholders[placeholder])
+    }
+
+    matches = regExp.exec(input)
+  }
+
+  // No helpers, return original input
+  return output
 }
 
 /**
