@@ -41,7 +41,7 @@ function performTextReplacement(input, placeholders) {
 
   // Thanks QuLogic!
   // https://regex101.com/r/er0Vkk/1
-  const regExp = /{{((?<variable>[^} ]+)|(?<helper>[^} ]+) (?<argument>[^}]+))}}/gm
+  const regExp = /(?<statement>{{((?<variable>[^} ]+)|(?<helper>[^} ]+) (?<argument>[^}]+))}})/gm
   let matches = regExp.exec(input)
 
   if (!matches) {
@@ -61,7 +61,7 @@ function performTextReplacement(input, placeholders) {
         const transformedPlaceholder = helperFunc(placeholders[helperArg])
 
         output = output
-          .replaceAll(`{{${helperName} ${helperArg}}}`, transformedPlaceholder)
+          .replaceAll(matches.groups.statement, transformedPlaceholder)
       }
     }
 
@@ -69,7 +69,7 @@ function performTextReplacement(input, placeholders) {
     const placeholder = matches?.groups?.variable
     if (placeholder) {
       output = output
-        .replaceAll('{{' + placeholder + '}}', placeholders[placeholder])
+        .replaceAll(matches.groups.statement, placeholders[placeholder])
     }
 
     matches = regExp.exec(input)
