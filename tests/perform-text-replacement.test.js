@@ -71,7 +71,7 @@ describe("text replacement", () => {
     });
   });
 
-  describe("Mustache implementation", () => {
+/*  describe("Mustache implementation", () => {
     testCases.forEach((testCase, idx) => {
       const { text, placeholders } = testCase.input;
       const expected = testCase.output;
@@ -83,7 +83,7 @@ describe("text replacement", () => {
         expect(actual).toEqual(expected);
       });
     });
-  });
+  });*/
 
   describe("implementation without handlebars", () => {
     testCases.forEach((testCase, idx) => {
